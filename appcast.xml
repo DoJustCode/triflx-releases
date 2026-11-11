@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle">
+  <channel>
+    <title>triflX</title>
+    <item>
+      <title>triflX 2.0.0</title>
+      <pubDate>Wed, 11 Nov 2026 19:10:23 +0000</pubDate>
+      <sparkle:version>1</sparkle:version>
+      <sparkle:shortVersionString>2.0.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Первый выпуск triflX: родные действия в «Быстрых командах» (App Intents), вся функциональность Trifl 1.4.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.0.0/triflX.dmg" type="application/octet-stream" sparkle:edSignature="fGAvFeIcRXyGVPmclNq5vioO82cYot6AilEeDRV73Jph9fmat2+opPag4LVCljbnlzWN2DGdr61jNeByJ7WmCQ==" length="7794748"/>
+    </item>
+  </channel>
+</rss>
