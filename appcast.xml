@@ -8,7 +8,7 @@
       <sparkle:version>2</sparkle:version>
       <sparkle:shortVersionString>2.1.0</sparkle:shortVersionString>
       <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
-      <description><![CDATA[Автоконвертация для совместимости (AVIF/HEIC/WebP → JPEG/PNG, MOV/MKV/WebM → MP4), зоны быстрых действий, исправления надёжности.]]></description>
+      <description><![CDATA[Автоконвертация для совместимости (AVIF/HEIC/WebP → JPEG/PNG, MOV → MP4), зоны быстрых действий, исправления надёжности.]]></description>
       <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.1.0/triflX.dmg" type="application/octet-stream" sparkle:edSignature="0i2pLiiedxnBEJ7jy6OQAdNcGpbwR3ZWfqgDaJPEwVWowiykeqJMQQ7YHYtFeHrQcw5xhZnMDxYhFP2jCAHcCg==" length="7870881"/>
     </item>
     <item>
