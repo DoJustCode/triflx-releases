@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.2.0</title>
+      <pubDate>Wed, 11 Nov 2026 21:21:29 +0000</pubDate>
+      <sparkle:version>3</sparkle:version>
+      <sparkle:shortVersionString>2.2.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Пресеты площадок (Telegram, Instagram, веб, почта, Slack/Discord), сравнение до/после, пакетное окно с настройками и отменой, метка «уже оптимизировано», обработка существующих файлов (в том числе в фоне), пункт «Оптимизировать с triflX» в меню Finder, кнопка «Отмена» и пауза перед автосжатием, встроенный конвертер MKV/WebM/AVI/TS/FLV/WMV/OGG/Opus/WMA/APE, исправления отслеживания папок.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.2.0/triflX.dmg" type="application/octet-stream" sparkle:edSignature="qXK3+u5mrsFvFa0BT4Zgw71vYwcBRB8VREyyn6cfX4pLdQYGArwFC7BkRhFQ9GhIpr/sjTbYaZlX8JiBbmLQCA==" length="16729641"/>
+    </item>
+    <item>
       <title>triflX 2.1.0</title>
       <pubDate>Wed, 11 Nov 2026 19:52:36 +0000</pubDate>
       <sparkle:version>2</sparkle:version>
