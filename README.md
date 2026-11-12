@@ -1,11 +1,11 @@
-<p align="center"><img src="docs/assets/hero.svg" width="100%" alt="triflX — сжимает картинки, видео, GIF, PDF и аудио сам"></p>
+<p align="center"><img src="docs/assets/hero.svg" width="460" alt="triflX — сжимает картинки, видео, GIF, PDF и аудио сам"></p>
 
 <p align="center">
 <a href="../../releases/latest"><img alt="Скачать" src="https://img.shields.io/github/v/release/DoJustCode/triflx-releases?label=%D0%A1%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C&color=4f6bff&style=for-the-badge"></a>
-<img alt="macOS 13+" src="https://img.shields.io/badge/macOS-13%2B-1f2937?style=for-the-badge&logo=apple&logoColor=white">
-<img alt="Apple Silicon и Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-universal-6a3df0?style=for-the-badge">
-<img alt="Бесплатно" src="https://img.shields.io/badge/%D0%91%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE-0.00%20%E2%82%BD-18a058?style=for-the-badge">
-<img alt="Без телеметрии" src="https://img.shields.io/badge/%D0%A2%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F-%D0%BD%D0%B5%D1%82-0ea5e9?style=for-the-badge">
+<img alt="macOS 13+" src="https://img.shields.io/badge/macOS-13%2B-1f2937?style=flat&logo=apple&logoColor=white">
+<img alt="Apple Silicon и Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-universal-6a3df0?style=flat">
+<img alt="Бесплатно" src="https://img.shields.io/badge/%D0%91%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE-0.00%20%E2%82%BD-18a058?style=flat">
+<img alt="Без телеметрии" src="https://img.shields.io/badge/%D0%A2%D0%B5%D0%BB%D0%B5%D0%BC%D0%B5%D1%82%D1%80%D0%B8%D1%8F-%D0%BD%D0%B5%D1%82-0ea5e9?style=flat">
 </p>
 
 <p align="center"><b>Русский</b> · <a href="README.en.md">English</a> · <a href="docs/GUIDE.ru.md">Руководство</a> · <a href="CHANGELOG.md">История версий</a></p>
@@ -18,7 +18,7 @@
 
 **triflX живёт в строке меню и делает это сам.** Сделали скриншот — он уже сжат. Скачали фото в папку — оно сжато. Перетащили файл на значок — сжат. Размер файла уменьшается в разы, а на глаз ничего не меняется. Всё считается на вашем Mac: файлы никуда не отправляются, телеметрии нет, интернет нужен только для проверки обновлений.
 
-<p align="center"><img src="docs/assets/flow-card.svg" width="900" alt="Схема: скриншот → карточка с «Отменой» → результат"></p>
+<p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Схема: скриншот → карточка с «Отменой» → результат"></p>
 
 ## Содержание
 - [Что нового в 2.3.0](#что-нового-в-230) — 13 новых возможностей
@@ -47,7 +47,7 @@
 - **Как открыть:** кнопка «Попробовать» на карточке результата · меню triflX · Finder → правая кнопка → triflX… → «Попробовать варианты…» · горячая клавиша ⌃⇧V · `triflx try файл`.
 - **Пример** (тестовая картинка-закат 3000×2000, 2,2 МБ): исходный формат при 80 — 1,9 МБ (−15%), WebP·80 — 392 КБ (−82%), AVIF·70 — 481 КБ (−78%), JPEG XL·70 — 84 КБ (−96%). Это картинка с плавными градиентами, на реальных фото экономия обычно скромнее.
 
-<p align="center"><img src="docs/assets/slider.svg" width="700" alt="Схема: шторка до/после"></p>
+<p align="center"><img src="docs/assets/slider.svg" width="460" alt="Схема: шторка до/после"></p>
 
 ### 2. Профили по источнику
 Разные файлы — разные правила. Профиль выбирается по **папке**, **приложению** (откуда скопировано в буфер), **скриншотам**, **сайту, с которого скачан файл**, или по части имени. В профиле: формат, качество, масштаб, максимальная сторона, метаданные, лимит «уложить в N МБ», «заменять или копию» — или просто «не трогать».
@@ -114,7 +114,7 @@ Vision на устройстве, без интернета: скриншот, �
 - Новые параметры терминала и MCP: `--template`, `--remove-bg`, `--lossless`, `--quality 1..100`, `--watermark`, `--force`, команды `ocr`, `remove-bg`, `try`, `stats`, `convert`.
 - Интерфейс полностью на русском и английском. Подробности и все изменения — в [CHANGELOG](CHANGELOG.md).
 
-<p align="center"><img src="docs/assets/finder-menu.svg" width="560" alt="Схема меню Finder с подменю triflX"></p>
+<p align="center"><img src="docs/assets/finder-menu.svg" width="420" alt="Схема меню Finder с подменю triflX"></p>
 
 > Иллюстрации-схемы (карточка результата, шторка, меню Finder) нарисованы вручную и подписаны как схемы; окна «Попробовать», «История», «Статистика», пакетное окно и вкладки настроек — настоящие скриншоты на тестовых файлах.
 

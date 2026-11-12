@@ -1,11 +1,11 @@
-<p align="center"><img src="docs/assets/hero.svg" width="100%" alt="triflX compresses images, video, GIF, PDF and audio automatically"></p>
+<p align="center"><img src="docs/assets/hero.svg" width="460" alt="triflX compresses images, video, GIF, PDF and audio automatically"></p>
 
 <p align="center">
 <a href="../../releases/latest"><img alt="Download" src="https://img.shields.io/github/v/release/DoJustCode/triflx-releases?label=Download&color=4f6bff&style=for-the-badge"></a>
-<img alt="macOS 13+" src="https://img.shields.io/badge/macOS-13%2B-1f2937?style=for-the-badge&logo=apple&logoColor=white">
-<img alt="Apple Silicon and Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-universal-6a3df0?style=for-the-badge">
-<img alt="Free" src="https://img.shields.io/badge/Price-free-18a058?style=for-the-badge">
-<img alt="No telemetry" src="https://img.shields.io/badge/Telemetry-none-0ea5e9?style=for-the-badge">
+<img alt="macOS 13+" src="https://img.shields.io/badge/macOS-13%2B-1f2937?style=flat&logo=apple&logoColor=white">
+<img alt="Apple Silicon and Intel" src="https://img.shields.io/badge/Apple%20Silicon%20%2B%20Intel-universal-6a3df0?style=flat">
+<img alt="Free" src="https://img.shields.io/badge/Price-free-18a058?style=flat">
+<img alt="No telemetry" src="https://img.shields.io/badge/Telemetry-none-0ea5e9?style=flat">
 </p>
 
 <p align="center"><a href="README.md">Русский</a> · <b>English</b> · <a href="docs/GUIDE.en.md">Guide</a> · <a href="CHANGELOG.en.md">Changelog</a></p>
@@ -20,7 +20,7 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 
 **triflX lives in the menu bar and does it for you.** Take a screenshot — it’s already compressed. Download a photo into a folder — compressed. Drop a file on the icon — compressed. Files get several times smaller and look the same. Everything is computed on your Mac: files never leave it, there is no telemetry, and the network is only used to check for updates.
 
-<p align="center"><img src="docs/assets/flow-card.svg" width="900" alt="Diagram: screenshot, a card with Cancel, the result"></p>
+<p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Diagram: screenshot, a card with Cancel, the result"></p>
 
 ## Contents
 - [What’s new in 2.3.0](#whats-new-in-230) — 13 new features
@@ -49,7 +49,7 @@ Not sure whether to pick WebP or AVIF, 70 or 80? Open the picture in the Try win
 - **How to open:** the “Try” button on the result card · the triflX menu · Finder → right-click → triflX… → “Try variants…” · hotkey ⌃⇧V · `triflx try file`.
 - **Example** (a 3000×2000 sunset test image, 2.2 MB): the original format at 80 is 1.9 MB (−15%), WebP·80 is 392 KB (−82%), AVIF·70 is 481 KB (−78%), JPEG XL·70 is 84 KB (−96%). That image has smooth gradients; real photos usually save less.
 
-<p align="center"><img src="docs/assets/slider.svg" width="700" alt="Diagram: before/after slider"></p>
+<p align="center"><img src="docs/assets/slider.svg" width="460" alt="Diagram: before/after slider"></p>
 
 ### 2. Profiles by source
 Different files, different rules. A profile matches by **folder**, **app** (where the clipboard content came from), **screenshots**, **the site a file was downloaded from**, or part of the name. A profile sets format, quality, scale, max side, metadata, a “fit into N MB” limit, replace-or-copy — or simply “leave alone”.
@@ -116,7 +116,7 @@ On-device Vision, offline: a screenshot, a photo of a document or a PDF → text
 - New terminal and MCP options: `--template`, `--remove-bg`, `--lossless`, `--quality 1..100`, `--watermark`, `--force`, commands `ocr`, `remove-bg`, `try`, `stats`, `convert`.
 - Fully bilingual (Russian and English) interface. Details and every change: see the [Changelog](CHANGELOG.en.md).
 
-<p align="center"><img src="docs/assets/finder-menu.svg" width="560" alt="Diagram of the Finder menu with the triflX submenu"></p>
+<p align="center"><img src="docs/assets/finder-menu.svg" width="420" alt="Diagram of the Finder menu with the triflX submenu"></p>
 
 > The schematic illustrations (result card, slider, Finder menu) are hand-drawn and labelled as diagrams; the Try, History, Statistics, batch window and Settings tabs are real screenshots on test files.
 

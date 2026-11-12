@@ -1,20 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" role="img" aria-label="Схема: контекстное меню Finder с пунктом triflX">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 520" width="420" height="520" role="img" aria-label="Схема: контекстное меню Finder с пунктом triflX">
 <style>
-:root{--bg:#f6f7fd;--menu:#fdfdff;--bd:#cfd3ee;--tx:#14163a;--mut:#6a6e98;--sel:#4f6bff}
+:root{--bg:#f6f7fd;--menu:#fdfdff;--bd:#cfd3ee;--tx:#14163a;--mut:#5b5f8a;--sel:#4f6bff}
 @media (prefers-color-scheme:dark){:root{--bg:#14162e;--menu:#25274f;--bd:#3d4287;--tx:#f2f3ff;--mut:#a3a8d8;--sel:#5b6cff}}
-text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:17px;fill:var(--tx)}
-.m{fill:var(--mut);font-size:14px}.w{fill:#fff}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:16px;fill:var(--tx)}
+.m{fill:var(--mut);font-size:14px}.w{fill:#fff;font-weight:600}
 </style>
-<rect width="760" height="520" rx="20" fill="var(--bg)"/>
-<g><rect x="40" y="40" width="300" height="430" rx="12" fill="var(--menu)" stroke="var(--bd)"/>
-<text x="64" y="82">Открыть</text><text x="64" y="118">Быстрый просмотр</text><line x1="56" y1="134" x2="324" y2="134" stroke="var(--bd)"/>
-<text x="64" y="166">Скопировать</text><text x="64" y="202">Переименовать…</text><line x1="56" y1="218" x2="324" y2="218" stroke="var(--bd)"/>
-<rect x="48" y="232" width="284" height="38" rx="8" fill="var(--sel)"/><text x="64" y="257" class="w">Оптимизировать с triflX</text>
-<rect x="48" y="276" width="284" height="38" rx="8" fill="var(--sel)" opacity=".18"/><text x="64" y="301">triflX…</text><text x="312" y="301" text-anchor="end">›</text>
-<text x="64" y="346" class="m">Пресет для выделенного ›</text>
-<line x1="56" y1="364" x2="324" y2="364" stroke="var(--bd)"/><text x="64" y="396" class="m">Теги…</text></g>
-<g><rect x="360" y="240" width="360" height="262" rx="12" fill="var(--menu)" stroke="var(--bd)"/>
-<text x="384" y="278">Попробовать варианты…</text><text x="384" y="310">Распознать текст (OCR)</text><text x="384" y="342">Удалить фон</text><text x="384" y="374">Размер под шаблон ›</text><text x="384" y="406">Документы ›</text>
-<text x="384" y="438" class="m">PDF → картинки · картинки → PDF</text><text x="384" y="462" class="m">склеить · разбить · HEIC/RAW → JPEG</text></g>
-<text x="40" y="500" class="m">Схема-иллюстрация меню Finder (не скриншот).</text>
+<rect width="420" height="520" rx="20" fill="var(--bg)" data-deco="1"/>
+<rect x="16" y="16" width="388" height="212" rx="12" fill="var(--menu)" stroke="var(--bd)"/>
+<text x="36" y="50">Открыть</text><text x="36" y="84">Быстрый просмотр</text><line x1="28" y1="100" x2="392" y2="100" stroke="var(--bd)" data-deco="1"/>
+<rect x="26" y="112" width="368" height="40" rx="8" fill="var(--sel)" data-deco="1"/><text x="40" y="138" class="w">Оптимизировать с triflX</text>
+<rect x="26" y="160" width="368" height="40" rx="8" fill="var(--sel)" opacity=".18" data-deco="1"/><text x="40" y="186">Подменю triflX</text><text x="380" y="186" text-anchor="end">›</text>
+<path d="M210 228 V248" stroke="var(--sel)" stroke-width="2" data-deco="1"/>
+<rect x="44" y="248" width="360" height="232" rx="12" fill="var(--menu)" stroke="var(--bd)"/>
+<text x="64" y="282">Попробовать варианты…</text><text x="64" y="316">Распознать текст (OCR)</text><text x="64" y="350">Удалить фон</text><text x="64" y="384">Размер под шаблон ›</text><text x="64" y="418">Документы ›</text>
+<text x="64" y="448" class="m">PDF ↔ картинки, склейка, разбивка</text><text x="64" y="468" class="m">HEIC/RAW → JPEG</text>
+<text x="16" y="506" class="m">Схема меню Finder, не скриншот.</text>
 </svg>

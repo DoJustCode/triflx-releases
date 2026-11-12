@@ -1,23 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 420" width="900" height="420" role="img" aria-label="Схема: шторка «до и после»">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 300" width="420" height="300" role="img" aria-label="Схема: шторка «до и после»">
 <style>
-:root{--bg:#f6f7fd;--bd:#d9dcf0;--tx:#14163a;--mut:#5b5f8a;--acc:#4f6bff}
-@media (prefers-color-scheme:dark){:root{--bg:#14162e;--bd:#34387a;--tx:#f2f3ff;--mut:#a3a8d8;--acc:#7b8dff}}
-text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;font-size:16px;fill:var(--mut)}
-.clip{animation:sl 5s ease-in-out infinite}
-@keyframes sl{0%,100%{transform:translateX(0)}50%{transform:translateX(-440px)}}
-.h{animation:hd 5s ease-in-out infinite}
-@keyframes hd{0%,100%{transform:translateX(0)}50%{transform:translateX(-440px)}}
+:root{--bg:#f6f7fd;--tx:#14163a;--mut:#5b5f8a}
+@media (prefers-color-scheme:dark){:root{--bg:#14162e;--tx:#f2f3ff;--mut:#a3a8d8}}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;font-size:15px;fill:var(--tx)}
+.m{fill:var(--mut);font-size:14px}
+.clip{animation:sl 5s ease-in-out infinite}.h{animation:sl 5s ease-in-out infinite}
+@keyframes sl{0%,100%{transform:translateX(0)}50%{transform:translateX(-165px)}}
 </style>
 <defs><linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2c2f6b"/><stop offset=".5" stop-color="#f0756d"/><stop offset="1" stop-color="#f5c27a"/></linearGradient>
-<clipPath id="c"><rect x="30" y="30" width="840" height="320" rx="14"/></clipPath>
-<clipPath id="right"><rect class="clip" x="470" y="30" width="400" height="320"/></clipPath></defs>
-<rect width="900" height="420" rx="20" fill="var(--bg)"/>
-<g clip-path="url(#c)">
-<rect x="30" y="30" width="840" height="320" fill="url(#sky)"/><circle cx="620" cy="200" r="46" fill="#fbeccd"/>
-<path d="M30 350V250Q150 190 260 250T500 240T740 250T870 230V350Z" fill="#46407f"/><path d="M30 350V290Q180 240 320 290T620 280T870 270V350Z" fill="#1f2350"/>
-</g>
-<g clip-path="url(#c)"><g clip-path="url(#right)"><rect x="30" y="30" width="840" height="320" fill="url(#sky)" opacity=".9"/><circle cx="620" cy="200" r="46" fill="#fbeccd"/><path d="M30 350V250Q150 190 260 250T500 240T740 250T870 230V350Z" fill="#46407f"/><path d="M30 350V290Q180 240 320 290T620 280T870 270V350Z" fill="#1f2350"/></g></g>
-<g class="h"><line x1="470" y1="30" x2="470" y2="350" stroke="#fff" stroke-width="3"/><circle cx="470" cy="190" r="18" fill="#fff"/><text x="470" y="196" text-anchor="middle" style="fill:#14163a;font-weight:700">↔</text></g>
-<text x="40" y="392">Оригинал · 2,2 МБ</text><text x="860" y="392" text-anchor="end">WebP · 70 · 125 КБ (−94%)</text>
-<text x="450" y="412" text-anchor="middle" style="font-size:13px">Схема-иллюстрация; настоящее окно «Попробовать» — на скриншоте ниже</text>
+<clipPath id="c"><rect x="16" y="16" width="388" height="190" rx="12"/></clipPath>
+<clipPath id="right"><rect class="clip" x="210" y="16" width="194" height="190"/></clipPath><g id="scene"><rect width="388" height="190" fill="url(#sky)"/><circle cx="280" cy="110" r="28" fill="#fbeccd"/><path d="M0 190V135Q70 100 130 135T260 130T388 120V190Z" fill="#46407f"/><path d="M0 190V160Q90 130 170 160T330 155T388 150V190Z" fill="#1f2350"/></g></defs>
+<rect width="420" height="300" rx="20" fill="var(--bg)" data-deco="1"/>
+<g clip-path="url(#c)" data-deco="1"><use href="#scene" x="16" y="16"/><g clip-path="url(#right)"><use href="#scene" x="16" y="16" opacity=".8"/></g></g>
+<g class="h" data-deco="1"><line x1="210" y1="16" x2="210" y2="206" stroke="#fff" stroke-width="3"/><circle cx="210" cy="111" r="17" fill="#fff"/><path d="M203 111 L208 106 V116Z M217 111 L212 106 V116Z" fill="#14163a"/></g>
+<text x="16" y="238">Слева: оригинал, 2,2 МБ</text>
+<text x="16" y="262">Справа: WebP, 125 КБ (−94%)</text>
+<text x="16" y="286" class="m">Схема. Настоящее окно — ниже.</text>
 </svg>
