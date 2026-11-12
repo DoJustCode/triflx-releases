@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.3.0</title>
+      <pubDate>Thu, 12 Nov 2026 17:01:01 +0000</pubDate>
+      <sparkle:version>4</sparkle:version>
+      <sparkle:shortVersionString>2.3.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Версия 2.3: «Попробовать» (сравнение вариантов), профили по источнику, «уложить в N МБ» для картинок/видео/PDF, статистика, горячие клавиши, история и откат оригиналов, безопасный просмотр, защита папок, водяной знак, документы (PDF/HEIC/RAW), удаление фона, размеры под шаблоны, OCR.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.3.0/triflX.dmg" type="application/octet-stream" sparkle:edSignature="1rhYtFr3JWWyDeA2L8dw4b4ZMSePGYxVNJHsFBjVRJckUKGYbS5i2+5uGZLWZa7pblNNOr++5PmwQ3hpy8BfCA==" length="18980191"/>
+    </item>
+    <item>
       <title>triflX 2.2.0</title>
       <pubDate>Wed, 11 Nov 2026 21:21:29 +0000</pubDate>
       <sparkle:version>3</sparkle:version>
