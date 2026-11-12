@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 360" width="1200" height="360" role="img" aria-label="Схема: скриншот, карточка с кнопкой «Отмена», готовый результат">
+<style>
+:root{--bg:#f6f7fd;--card:#fff;--bd:#d9dcf0;--tx:#14163a;--mut:#5b5f8a;--acc:#4f6bff;--ok:#18a058;--warn:#e5484d;--bar:#e6e8f8}
+@media (prefers-color-scheme:dark){:root{--bg:#14162e;--card:#1f2145;--bd:#34387a;--tx:#f2f3ff;--mut:#a3a8d8;--acc:#7b8dff;--ok:#4cd68b;--warn:#ff7a7f;--bar:#2c3066}}
+text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif}
+.t{font-size:20px;font-weight:600;fill:var(--tx)}.m{font-size:15px;fill:var(--mut)}.b{font-size:15px;font-weight:600;fill:#fff}
+.step{opacity:0;animation:cy 9s infinite}
+.s2{animation-delay:3s}.s3{animation-delay:6s}
+@keyframes cy{0%{opacity:0}6%,30%{opacity:1}36%,100%{opacity:0}}
+.fill{transform-box:fill-box;transform-origin:left center;animation:pg 3s linear infinite;animation-delay:3s}
+@keyframes pg{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+</style>
+<rect width="1200" height="360" rx="24" fill="var(--bg)"/>
+<text x="60" y="44" class="m">1. Появился скриншот или файл</text><text x="440" y="44" class="m">2. Пауза и карточка с «Отменой»</text><text x="820" y="44" class="m">3. Готово: «до → после», возврат в один клик</text>
+<g class="step"><rect x="60" y="80" width="320" height="230" rx="16" fill="var(--card)" stroke="var(--bd)"/>
+<rect x="84" y="104" width="272" height="140" rx="10" fill="var(--bar)"/><circle cx="300" cy="140" r="18" fill="var(--acc)" opacity=".6"/><path d="M84 244 L170 170 L230 220 L270 190 L356 244Z" fill="var(--acc)" opacity=".35"/>
+<text x="84" y="274" class="t">Снимок экрана.png</text><text x="84" y="296" class="m">4,2 МБ · в буфере и на рабочем столе</text></g>
+<g class="step s2"><rect x="440" y="80" width="320" height="230" rx="16" fill="var(--card)" stroke="var(--bd)"/>
+<text x="464" y="120" class="t">Сжимаю…</text><text x="464" y="146" class="m">Снимок экрана.png</text>
+<rect x="464" y="170" width="272" height="10" rx="5" fill="var(--bar)"/><rect x="464" y="170" width="272" height="10" rx="5" fill="var(--acc)" class="fill"/>
+<rect x="464" y="236" width="120" height="40" rx="10" fill="var(--warn)"/><text x="524" y="262" class="b" text-anchor="middle">Отмена</text>
+<text x="600" y="262" class="m">оригинал не изменится</text></g>
+<g class="step s3"><rect x="820" y="80" width="320" height="230" rx="16" fill="var(--card)" stroke="var(--bd)"/>
+<text x="844" y="120" class="t">Готово</text><text x="844" y="146" class="m">4,2 МБ → 0,6 МБ</text>
+<text x="844" y="196" fill="var(--ok)" style="font-size:44px;font-weight:700">−86%</text>
+<rect x="844" y="236" width="150" height="40" rx="10" fill="var(--acc)"/><text x="919" y="262" class="b" text-anchor="middle">Вернуть оригинал</text>
+<rect x="1004" y="236" width="110" height="40" rx="10" fill="none" stroke="var(--bd)"/><text x="1059" y="262" class="m" text-anchor="middle">Сильнее</text></g>
+<text x="60" y="338" class="m">Схема-иллюстрация (не скриншот): цифры условные. Реальные окна — ниже на этой странице.</text>
+</svg>
