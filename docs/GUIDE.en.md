@@ -23,6 +23,7 @@ triflX shrinks images, GIFs, video, PDF and audio on your Mac. It lives in the m
 16. [Built-in ffmpeg converter](#16-built-in-ffmpeg-converter)
 17. [Where things are stored](#17-where-things-are-stored)
 18. [FAQ](#18-faq)
+19. [Version 2.3: new features](#19-version-23-new-features)
 
 ---
 
@@ -232,3 +233,62 @@ The log is never sent anywhere. “Report a problem…” opens a GitHub form; y
 **MKV/WebM video isn't processed automatically.** Tick the extension in “Advanced → Compatibility → Video → MP4”.
 **How do I pause everything?** Menu → “Pause automatic optimization”, or switch off watching the clipboard / folders.
 **Privacy.** Everything happens locally. The only network requests are update checks (Sparkle) and, when you click it, opening a GitHub page.
+
+## 19. Version 2.3: new features
+Everything is configurable in the Settings window (sidebar; the search box finds each setting by keywords). The UI is available in Russian and English.
+
+### Try
+A window that compares one image in several variants side by side: quality 70/80/90, WebP, AVIF, JPEG XL and the original format, plus a “lossless” mode for print. Each variant has its real size (the file is fully encoded), the savings and a before/after slider. Pick a variant and press “Apply”. Open it from the “Try” button on the card, the triflX menu, Finder → triflX → “Try variants…”, the ⌃⇧V hotkey, or `triflx try file [--keep folder]`.
+
+### Source profiles
+Settings → “Profiles”. A profile matches by folder, app (clipboard), screenshots, the site a file was downloaded from, or part of the name. A profile sets format, quality, scale, maximum side, metadata, a “fit into N MB” limit, replace or copy mode, or “leave alone”. It applies to automatic processing: the first match from the top wins, it overrides folder settings and doesn’t change manual actions. A profile can be based on a pipeline.
+
+### Fit into a size
+One goal, with parameters chosen per type: quality and scale (images), a resolution ladder (video), dpi (PDF). If the target is unreachable you get the smallest possible result and a “size target not reached” note on the card and in the terminal. A file already under the limit is left alone. Where: the card (“Fit into size”: 2, 5, 10, 25, 50 MB or custom), the “25 MB (email)”, “10 MB (Telegram)” and “custom limit” presets, Shortcuts (Fit File to Size), the terminal `--max-size 25MB`, the batch window.
+
+### Statistics
+Menu → “Statistics…” or Settings → “Statistics”: total, month, week, today, file count, breakdowns by type, source and folder, and the biggest savings. Data stays on this Mac (`stats.jsonl`). There is an on/off switch and a “Reset statistics…” button. The week total is shown in the menu. Terminal: `triflx stats [--json]`.
+
+### Drop on the menu-bar icon and the one-time window
+Drop files on the triflX menu-bar icon to open the batch window with settings for this run only (format, size, limit, background, watermark). Hold ⌥ when dropping to compress right away, ⌘ for strong compression. To skip the window: General → “Skip the settings window when dropping on the icon”. The same window: menu → “Process files…”.
+
+### Hotkeys
+Settings → “Hotkeys”: click the field and type a shortcut (at least one modifier; Esc cancels, ⌫ turns it off). Available: optimize the clipboard image, **selection in Finder**, strong and medium compression, restore the original, restore the last one, OCR (⌃⇧T), “Try” (⌃⇧V). “Selection in Finder” needs permission to control Finder: System Settings → Privacy & Security → Automation → triflX → Finder. Settings has a “Request / check” button and shows a hint when access is missing. The Finder right-click menu needs no permission.
+
+### Originals and rollback by time
+Settings → “Storage”: “Don’t keep” (≈30 minutes for the “Restore” button), “Keep for N days”, “Keep up to a size limit” (oldest deleted first). Backups younger than two minutes are never deleted. Auto-cleanup runs at launch and every 10 minutes, the used space is shown, and there is “Clear now…”. The **“History & originals”** window (menu): restore for the last 24 hours, 7 days, everything, or selectively.
+
+### Safe preview
+Settings → “Protection & preview”. Off by default. Before replacing a file it shows before/after and asks: **Replace**, **Keep original** or **Save a “.min” copy**. It can be enabled separately for automation and manual actions, and limited to folders and types. The choice can apply to the next files for 2 minutes.
+
+### Processing protection
+Settings → “Protection & preview”. Protected by default: `.git`, `.svn`, `.hg`, `node_modules`, `DerivedData`, `Pods`, Xcode projects and workspaces, Photos and Lightroom libraries, `.app`/`.framework` bundles, Photoshop and Adobe caches, system folders, iCloud files that aren’t downloaded yet, and triflX’s own backups. The name, path and type lists are editable, with add-folder buttons and “Reset to defaults”. Automation (folders, clipboard, background) skips them. Manual actions show a warning: “Skip protected” or “Process anyway”. The terminal refuses without `--force`.
+
+### Watermark
+Settings → “Watermark”. Off by default. Text or image, position (3×3 grid), size (% of width), opacity, font, colour, shadow, margin; a live preview in settings. Enabled separately for automation, presets and manual actions, and can be limited to types and folders. Terminal: `--watermark TEXT --wm-pos br --wm-opacity 0.5 --wm-size 25`, `--no-watermark`. Images only. Don’t enable it for automation without the “already optimized” tag: a file would get the mark again.
+
+### Documents
+Settings → “Documents”. The triflX menu → “Documents”, Finder → triflX → “Documents”, Shortcuts, and the terminal `triflx convert`.
+- **HEIC / RAW → JPEG or PNG**.
+- **PDF → images**: PNG/JPEG/WebP, dpi, page range (`1-3,5`), a “name pages” subfolder. `triflx convert pdf2img --format png --dpi 150 --pages 1-3 file.pdf`.
+- **Images → one PDF**: order (name, date, as selected), page size (match image, A4, Letter), margins in mm, compression. `triflx convert img2pdf --page a4 --order given -o out.pdf photos...`.
+- **Merge PDFs**: `triflx convert merge -o out.pdf a.pdf b.pdf`.
+- **Split PDF**: one page each, every N pages, or by ranges. `triflx convert split --every 2 file.pdf`, `--ranges 1-3,4-6`.
+
+The result is always saved next to the source files; originals are not changed.
+
+### Background removal and resize to template
+- **Remove background** (macOS 14 or later; hidden on macOS 13): Vision cuts out the main subject and saves “name-nobg.png” with transparency (or a white/custom background, with an optional “crop to the subject”). Runs on-device. Card, menu, Finder, Shortcuts, terminal `triflx remove-bg file`.
+- **Resize to template**: exact pixel size for marketplaces and social networks. Built in: marketplace 1000×1000 and 900×1200, Instagram 1080×1350, square 1080×1080, story 1080×1920, Open Graph 1200×630, video thumbnail 1280×720, header 1500×500, avatar 400×400. Modes: “Fit” (margins in the background colour), “Fill” (centre crop), “Smart crop” (the frame shifts toward the main subject). Custom templates and “show in the preset list”: Settings → “Sizes & background”. Terminal: `--template ig-post` or `--template 1080x1350:fit`.
+
+### Text recognition (OCR)
+On-device Vision, offline. Images and PDFs (a PDF with a text layer uses the layer; scanned pages are recognized). Output: clipboard, a `.txt` next to the file, or both; language choice (order matters), a fast mode, and “recognize text in clipboard screenshots” (the text is added to the clipboard next to the image). Start it with ⌃⇧T, the triflX menu, Finder → triflX, Shortcuts (Recognize Text), or `triflx ocr [--lang ru,en] [--txt] file...`.
+
+### New Shortcuts actions
+Fit File to Size, Resize to Template, Remove Background, Recognize Text, PDF to Images, Images to PDF, Merge PDFs.
+
+### Finder menu
+A “triflX…” item with a submenu: try variants, OCR, remove background, resize to template, documents (PDF → images, images → PDF, merge, split, HEIC/RAW → JPEG/PNG). If the submenu doesn’t appear after updating: `killall Finder`.
+
+### Terminal: what’s new
+`--template`, `--remove-bg`, `--lossless`, `--quality 1..100`, `--watermark`, `--force`, commands `ocr`, `remove-bg`, `try`, `stats`, `convert pdf2img|img2pdf|merge|split`, `selftest`. The MCP `optimize` tool gained `template`, `remove_background`, `lossless`, `force`.
