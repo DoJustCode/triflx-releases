@@ -2,6 +2,21 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.4.0] - 2026-11-14
+
+### Added
+- Audio: loudness normalization (-14, -16 or -23 LUFS, BS.1770) without clipping, and cover art control (keep, shrink, remove). Output is M4A. `--loudness` and `--cover` options in the CLI and MCP.
+- PDF: optional MRC mode for scans. Text becomes a sharp black layer and the background is compressed harder. `--mrc` option.
+- Pipelines: new steps (quality, max size, metadata, lossless, MRC, loudness, cover).
+- Settings: "Reset settings..." button.
+
+### Changed
+- Digitally signed PDFs are skipped to keep the signature valid (`--optimize-signed-pdfs` turns the skip off).
+- The Mac no longer sleeps during long video, PDF and audio jobs.
+
+### Fixed
+- Settings import works correctly.
+
 ## [2.3.3] - 2026-11-13
 
 ### Fixed
