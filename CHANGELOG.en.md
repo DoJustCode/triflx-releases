@@ -2,6 +2,11 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.3.3] - 2026-11-13
+
+### Fixed
+- HDR photos (JPEG and HEIC, for example from an iPhone) no longer turn into plain photos when compressed: the gain map and orientation are kept. If a photo is cropped, watermarked or fitted to a size template, HDR is still not kept.
+
 ## [2.3.2] - 2026-11-13
 
 ### Security
