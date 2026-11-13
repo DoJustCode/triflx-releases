@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.3.2</title>
+      <pubDate>Fri, 13 Nov 2026 19:28:08 +0000</pubDate>
+      <sparkle:version>6</sparkle:version>
+      <sparkle:shortVersionString>2.3.2</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Безопасность: triflX спрашивает подтверждение, если чужое приложение или сайт просит обработать файлы через ссылку triflx://. Ссылки из меню Finder подписаны и работают без вопросов. Из MCP убран обход защищённых папок. Папка данных triflX доступна только владельцу. Новое окно установки: чёткий фон на Retina, стрелки и подсказки.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.3.2/triflX.dmg" type="application/octet-stream" sparkle:edSignature="cxi26toxUyzZxhLSFaWUO++Udm3SM6ZYcIAa7h7MNq/F+wPR2znHR8EyHLeD4Q0WCNXi8sjqYtvm8/BHQs8+Bg==" length="17501045"/>
+    </item>
+    <item>
       <title>triflX 2.3.1</title>
       <pubDate>Fri, 13 Nov 2026 18:47:27 +0000</pubDate>
       <sparkle:version>5</sparkle:version>
