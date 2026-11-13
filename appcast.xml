@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.3.3</title>
+      <pubDate>Fri, 13 Nov 2026 19:48:44 +0000</pubDate>
+      <sparkle:version>7</sparkle:version>
+      <sparkle:shortVersionString>2.3.3</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Исправлено: при сжатии HDR-фото (JPEG и HEIC, например с iPhone) triflX теряло HDR и превращало снимок в обычный. Теперь карта усиления и ориентация сохраняются. Если фото обрезается, получает водяной знак или шаблон размера, HDR по-прежнему не сохраняется.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.3.3/triflX.dmg" type="application/octet-stream" sparkle:edSignature="ZuRSeuz7wKeCLc+Qo2yx9o+K/VRPNoLVOHypo6tGwev3eOAkEDZPn4Jlyu6Oi2DG8f1MDEdDpjQBdi05upyuAQ==" length="17509507"/>
+    </item>
+    <item>
       <title>triflX 2.3.2</title>
       <pubDate>Fri, 13 Nov 2026 19:28:08 +0000</pubDate>
       <sparkle:version>6</sparkle:version>
