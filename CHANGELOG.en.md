@@ -2,6 +2,11 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.3.1] - 2026-11-13
+
+### Changed
+- The DMG install window now has a background, an arrow and a hint to drag the triflX icon into Applications. App features are the same as in 2.3.0.
+
 ## [2.3.0] - 2026-11-12
 
 ### Added
