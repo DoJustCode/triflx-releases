@@ -2,6 +2,16 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.3.2] - 2026-11-13
+
+### Security
+- `triflx://` links from other apps and websites now ask for confirmation. Links from the Finder menu are signed and pass without a prompt.
+- MCP can no longer bypass protected folders (`force` remains in the CLI only).
+- The triflX data folder (original backups, log, statistics) is readable by its owner only.
+
+### Changed
+- A new install window: a sharp Retina background, arrows and hints.
+
 ## [2.3.1] - 2026-11-13
 
 ### Changed
