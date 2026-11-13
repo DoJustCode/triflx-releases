@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.3.1</title>
+      <pubDate>Fri, 13 Nov 2026 18:47:27 +0000</pubDate>
+      <sparkle:version>5</sparkle:version>
+      <sparkle:shortVersionString>2.3.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Новое окно установки: фон, стрелка и подсказка перетащить triflX в папку Программы. Остальное без изменений, как в 2.3.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.3.1/triflX.dmg" type="application/octet-stream" sparkle:edSignature="9x2OtWnwXDpSfe9pKgPcjWF99dR34Q+HYGgyxFRtCtRzzMBaCW9YCNeQPAGvJS2nZCbtcSyaMSpZJP8TxEGcAw==" length="16861624"/>
+    </item>
+    <item>
       <title>triflX 2.3.0</title>
       <pubDate>Thu, 12 Nov 2026 17:01:01 +0000</pubDate>
       <sparkle:version>4</sparkle:version>
