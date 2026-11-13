@@ -10,7 +10,7 @@
 
 <p align="center"><a href="README.md">Русский</a> · <b>English</b> · <a href="docs/GUIDE.en.md">Guide</a> · <a href="CHANGELOG.en.md">Changelog</a></p>
 
-<h3 align="center"><a href="../../releases/latest">⬇️ Download triflX.dmg — latest version</a></h3>
+<h3 align="center"><a href="../../releases/latest">⬇️ Download triflX.dmg - latest version</a></h3>
 
 > The app interface is available in Russian and English. The hero banner above is in Russian; the screenshots below are English.
 
@@ -18,12 +18,12 @@
 
 A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned PDF that “weighs as much as a movie”. You end up with converters, online compressors (handing them your files) or an export dialog with the right settings.
 
-**triflX lives in the menu bar and does it for you.** Take a screenshot — it’s already compressed. Download a photo into a folder — compressed. Drop a file on the icon — compressed. Files get several times smaller and look the same. Everything is computed on your Mac: files never leave it, there is no telemetry, and the network is only used to check for updates.
+**triflX lives in the menu bar and does it for you.** Take a screenshot - it’s already compressed. Download a photo into a folder - compressed. Drop a file on the icon - compressed. Files get several times smaller and look the same. Everything is computed on your Mac: files never leave it, there is no telemetry, and the network is only used to check for updates.
 
 <p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Diagram: screenshot, a card with Cancel, the result"></p>
 
 ## Contents
-- [What’s new in 2.3.0](#whats-new-in-230) — 13 new features
+- [What’s new in 2.3.0](#whats-new-in-230) - 13 new features
 - [What’s new in 2.2.0](#whats-new-in-220)
 - [Features and comparison](#features-and-comparison)
 - [Formats](#formats)
@@ -38,7 +38,7 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 
 ## What’s new in 2.3.0
 
-Version 2.3 turns triflX from a compressor into a toolkit for working with files: compare, fine-tune, fit into a limit, protect, roll back, recognize. Every feature is configurable in the Settings window (sidebar with search); anything risky is off by default.
+Version 2.3 adds 13 features: comparing compression variants, fitting a file into a size limit, protecting folders, restoring originals, recognizing text and more. Everything is set up in the Settings window (sections on the left, search on top). Anything that could change your files in a surprising way is off by default.
 
 ### 1. “Try”: every variant side by side, with real sizes
 
@@ -52,7 +52,7 @@ Not sure whether to pick WebP or AVIF, 70 or 80? Open the picture in the Try win
 <p align="center"><img src="docs/assets/slider.svg" width="460" alt="Diagram: before/after slider"></p>
 
 ### 2. Profiles by source
-Different files, different rules. A profile matches by **folder**, **app** (where the clipboard content came from), **screenshots**, **the site a file was downloaded from**, or part of the name. A profile sets format, quality, scale, max side, metadata, a “fit into N MB” limit, replace-or-copy — or simply “leave alone”.
+Different files, different rules. A profile matches by **folder**, **app** (where the clipboard content came from), **screenshots**, **the site a file was downloaded from**, or part of the name. A profile sets format, quality, scale, max side, metadata, a “fit into N MB” limit, replace-or-copy - or simply “leave alone”.
 - **How to enable:** Settings → “Profiles” → “Add profile from template”. It applies to automation (folders, clipboard, background): the first match from the top wins.
 - **Examples:** “screenshots → WebP, up to 1600 px”, “folder Clients/Print → leave alone”, “downloaded from unsplash.com → JPEG 85”.
 
@@ -74,7 +74,7 @@ Drop files on the triflX menu-bar icon: the batch window opens where you choose 
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/shots/en-dark-w-batch.webp"><img src="docs/assets/shots/en-light-w-batch.webp" width="420" alt="Batch window with one-time settings"></picture></p>
 
 ### 6. Hotkeys, including “optimize selection in Finder”
-Select files in Finder, press a shortcut — done. Shortcuts are configured in “Hotkeys” (click the field and press keys; Esc cancels, ⌫ turns it off). “Selection in Finder” needs permission to control Finder (System Settings → Privacy → Automation); Settings has a “Request / check” button and a clear hint if access is missing.
+Select files in Finder, press a shortcut - done. Shortcuts are configured in “Hotkeys” (click the field and press keys; Esc cancels, ⌫ turns it off). “Selection in Finder” needs permission to control Finder (System Settings → Privacy → Automation); Settings has a “Request / check” button and a clear hint if access is missing.
 <p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/shots/en-dark-p-hotkeys.webp"><img src="docs/assets/shots/en-light-p-hotkeys.webp" width="820" alt="The Hotkeys tab"></picture></p>
 
 ### 7. History and soft rollback of originals
@@ -143,9 +143,9 @@ On-device Vision, offline: a screenshot, a photo of a document or a PDF → text
 | Images, video, GIF, PDF, audio in one place | ✅ | partly | depends on the app |
 | WebP, AVIF, JPEG XL, HEIC | ✅ | partly | depends on the app |
 | “Fit into N MB” | ✅ | rarely | by trial and error |
-| Roll back the original | ✅ | — | — |
+| Roll back the original | ✅ | - | - |
 | Command line and MCP for AI agents | ✅ | ❌ | ❌ |
-| Price | free | limits and ads | — |
+| Price | free | limits and ads | - |
 
 **Ways to start it:** clipboard · watched folders · drag and drop onto the window and the icon · Finder menu · hotkeys · Shortcuts · terminal · MCP.
 
@@ -155,7 +155,7 @@ On-device Vision, offline: a screenshot, a photo of a document or a PDF → text
 |---|---|
 | Images | JPEG, PNG, HEIC, WebP, AVIF, JPEG XL, TIFF, BMP (+ conversion between them) |
 | Animation | GIF |
-| Video | MP4, MOV; via the built-in ffmpeg — MKV, WebM, AVI, TS, FLV, WMV |
+| Video | MP4, MOV; via the built-in ffmpeg - MKV, WebM, AVI, TS, FLV, WMV |
 | Audio | WAV, AIFF, FLAC, MP3, OGG, Opus, WMA, APE → AAC/M4A |
 | Documents | PDF (compress, split, merge, PDF ↔ images), HEIC/RAW → JPEG/PNG |
 
@@ -215,6 +215,6 @@ The `triflx` command is installed with one button: Settings → “Tools” → 
 
 ## Documentation
 
-- **[Guide (EN)](docs/GUIDE.en.md)** · **[Руководство (RU)](docs/GUIDE.ru.md)** — installation, every Settings tab, every feature, scenarios (email, messengers, web, print), troubleshooting, uninstall.
+- **[Guide (EN)](docs/GUIDE.en.md)** · **[Руководство (RU)](docs/GUIDE.ru.md)** - installation, every Settings tab, every feature, scenarios (email, messengers, web, print), troubleshooting, uninstall.
 - **[Changelog](CHANGELOG.en.md)** · [История версий (RU)](CHANGELOG.md)
 - [Download the latest version](../../releases/latest)

@@ -15,5 +15,5 @@ text{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Ar
 <g class="h" data-deco="1"><line x1="210" y1="16" x2="210" y2="206" stroke="#fff" stroke-width="3"/><circle cx="210" cy="111" r="17" fill="#fff"/><path d="M203 111 L208 106 V116Z M217 111 L212 106 V116Z" fill="#14163a"/></g>
 <text x="16" y="238">Слева: оригинал, 2,2 МБ</text>
 <text x="16" y="262">Справа: WebP, 125 КБ (−94%)</text>
-<text x="16" y="286" class="m">Схема. Настоящее окно — ниже.</text>
+<text x="16" y="286" class="m">Схема. Настоящее окно - ниже.</text>
 </svg>
