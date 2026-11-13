@@ -23,6 +23,7 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 <p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Diagram: screenshot, a card with Cancel, the result"></p>
 
 ## Contents
+- [What’s new in 2.4.0](#whats-new-in-240)
 - [What’s new in 2.3.0](#whats-new-in-230) - 13 new features
 - [What’s new in 2.2.0](#whats-new-in-220)
 - [Features and comparison](#features-and-comparison)
@@ -33,6 +34,20 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 - [Privacy](#privacy)
 - [FAQ](#faq)
 - [Documentation](#documentation)
+
+---
+
+## What’s new in 2.4.0
+
+- **Audio: loudness and cover art.** Normalize to -14 (streaming), -16 (Apple Music, podcasts) or -23 LUFS (broadcast) per BS.1770 without clipping: gain is capped by a -1 dB peak. Cover art can be kept, shrunk to 600 px or removed; tags are preserved. Output is M4A. CLI: `--loudness 14|16|23`, `--cover keep|shrink|remove`.
+- **PDF: layered scans (MRC).** Optional (Settings → Advanced → PDF, CLI `--mrc`). Text is split into a sharp black 300 dpi layer and the background is compressed harder. A 3-page test scan: 12.3 MB → 470 KB versus 3.2 MB with normal compression. Trade-offs: text becomes black; pages with a text layer or rotation are left alone.
+- **Digitally signed PDFs** are skipped so the signature stays valid (`--optimize-signed-pdfs` turns the skip off).
+- **Pipelines:** new steps Quality, Max side, Metadata, Lossless, MRC, Loudness, Cover.
+- **HDR photos** (JPEG, iPhone HEIC) keep their gain map and orientation. Files are a bit larger but stay HDR.
+- **Security:** `triflx://` links from other apps need confirmation, MCP can’t bypass protected folders, the data folder is owner-only.
+- **Other:** the Mac no longer sleeps during long jobs, settings import fixed, “Reset settings…” button, new DMG install window.
+
+Full list: [CHANGELOG](CHANGELOG.en.md).
 
 ---
 
@@ -156,8 +171,8 @@ On-device Vision, offline: a screenshot, a photo of a document or a PDF → text
 | Images | JPEG, PNG, HEIC, WebP, AVIF, JPEG XL, TIFF, BMP (+ conversion between them) |
 | Animation | GIF |
 | Video | MP4, MOV; via the built-in ffmpeg - MKV, WebM, AVI, TS, FLV, WMV |
-| Audio | WAV, AIFF, FLAC, MP3, OGG, Opus, WMA, APE → AAC/M4A |
-| Documents | PDF (compress, split, merge, PDF ↔ images), HEIC/RAW → JPEG/PNG |
+| Audio | WAV, AIFF, FLAC, MP3, M4A, OGG, Opus, WMA, APE → AAC/M4A (with loudness normalization and cover art handling) |
+| Documents | PDF (compress, MRC for scans, split, merge, PDF ↔ images), HEIC/RAW → JPEG/PNG |
 
 ## Install in 3 steps
 
@@ -188,6 +203,8 @@ Shortcuts can be changed and turned off: Settings → “Hotkeys” (the full li
 triflx optimize --max-size 25MB --template ig-post photo.jpg
 triflx convert pdf2img --dpi 150 --pages 1-3 document.pdf
 triflx ocr --lang ru,en --txt screenshot.png
+triflx optimize --loudness 16 --cover shrink track.mp3
+triflx optimize --mrc scan.pdf
 triflx try photo.jpg
 triflx stats --json
 ```

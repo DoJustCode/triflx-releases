@@ -83,7 +83,7 @@ After compression a card appears in the bottom-right corner: thumbnail, size “
 | GIF | GIF | Frame and palette reduction, optional speed-up |
 | Video | MP4, MOV, M4V, MPG, plus MKV, WebM, AVI, TS, FLV, WMV (via built-in ffmpeg) | H.264 or HEVC, resolution/fps/size limits, mute, speed, MP4, GIF |
 | PDF | PDF | Image compression inside (macOS filter or a set dpi), page crop |
-| Audio | WAV, AIFF, FLAC, MP3, plus OGG, Opus, WMA, APE (via ffmpeg) | AAC in M4A, default or set bitrate |
+| Audio | WAV, AIFF, FLAC, MP3, plus OGG, Opus, WMA, APE (via ffmpeg) | AAC in M4A, default or set bitrate, optional loudness normalization and cover art handling (M4A is accepted as input only with these options) |
 
 Animated WebP/APNG and multi-frame files are never flattened to one frame. Corrupt, empty and unsupported files are skipped with a clear message (details in the error log).
 
@@ -117,10 +117,10 @@ Apply **only to automation** (clipboard and folders); things you drag yourself a
 - **Adaptive compression**: large photos get stronger compression, small ones lighter; heavy PDF pages get a lower dpi. Manual settings win.
 - **Images**: smart crop (the frame shifts toward the main subject, using Vision); keep wide colour (Display P3) instead of converting to sRGB.
 - **Video**: frame-rate cap (30 / 60 / half / quarter of the source) - 120 fps screen recordings shrink a lot.
-- **Audio**: AAC bitrate (macOS default or a set value).
+- **Audio**: AAC bitrate (macOS default or a set value); *Loudness* (unchanged, -14, -16, -23 LUFS); *Cover art* (keep, shrink to 600 px, remove).
 - **Quick-action zones** - [section 8](#8-pipelines-and-quick-action-zones).
 - **Compatibility** (auto-conversion, automation only): *Images → JPEG* and *→ PNG* (AVIF, HEIC, WebP, JPEG XL, BMP, TIFF), *Video → MP4* (MOV, MKV, WebM, AVI, FLV, WMV, TS, M4V, MPG…), *Audio → M4A* (OGG, Opus, WMA, APE, MP3). Tick the extensions to convert. WAV/AIFF/FLAC always become AAC.
-- **PDF**: image resolution inside PDFs (default 144 dpi or 72-300 dpi).
+- **PDF**: image resolution inside PDFs (default 144 dpi or 72-300 dpi); the **“Layered scans (MRC)”** switch. Digitally signed PDFs are left alone unless you pass the CLI flag `--optimize-signed-pdfs`.
 - **Photos.app**: optimize images copied from Photos; skip if more than N are copied; downscale the longest side to N px.
 - **Clipboard file name**: template with `%y %m %d %H %M %S %i` (default “Screenshot”).
 - **External editor** per images / video / audio / PDF - a button appears on the card.
@@ -130,13 +130,13 @@ Apply **only to automation** (clipboard and folders); things you drag yourself a
 Working folder path, backup mode (“don’t keep”, N days, up to a size limit), buttons “Open working folder”, “Backup folder”, “Clean working folder” (doesn't touch files the clipboard or recent results still reference). *Keep creation and modification dates*; **“Pause automatic optimization”** (also in the menu).
 
 ### Pipelines
-Step sets applied in one pass: *Optimize*, *Strong compression*, *Downscale %*, *Convert to* (WebP, AVIF, JPEG XL, JPEG, PNG, HEIC), *Crop to ratio*, *Remove audio*, *Video speed*, *Video to GIF*, *Video scenario*. The **“Preset”** checkbox puts a pipeline into the presets menus ([section 7](#7-platform-presets)). A pipeline can be assigned to the clipboard, drag and drop, a zone or a specific folder.
+Step sets applied in one pass: *Optimize*, *Strong compression*, *Downscale %*, *Convert to* (WebP, AVIF, JPEG XL, JPEG, PNG, HEIC), *Crop to ratio*, *Remove audio*, *Video speed*, *Video to GIF*, *Video scenario*, *Quality*, *Max side*, *Metadata*, *Lossless*, *MRC for scans*, *Loudness*, *Cover art*. The **“Preset”** checkbox puts a pipeline into the presets menus ([section 7](#7-platform-presets)). A pipeline can be assigned to the clipboard, drag and drop, a zone or a specific folder.
 
 ### Tools
 - **Finder menu** - toggle and hint ([section 13](#13-finder-menu)).
 - Hotkey reference; ignored-apps list.
 - **Install the triflx command** and **Copy MCP config** ([section 15](#15-terminal-and-ai-agents)).
-- **Data**: open the backup folder; **export and import settings** to a file.
+- **Data**: open the backup folder; **export and import settings** to a file; **“Reset settings…”** (with confirmation).
 
 ### Tabs added in 2.3
 Profiles · Protection & preview · Watermark · Sizes & background · Documents · Text recognition · Hotkeys · Statistics. Each is described in [section 19](#19-version-23-new-features) with a screenshot. The “Storage” tab gained backup modes and the History & originals window.
@@ -216,6 +216,9 @@ triflx optimize --json *.png                 # JSON output
 | `--metadata strip\|keep\|nogps` | EXIF and location |
 | `--video universal\|messenger\|screen\|max`, `--video-limit MB` | video scenario and limit |
 | `--quality low\|medium\|high`, `--max-dim N` | quality and side cap |
+| `--loudness 14\|16\|23`, `--cover keep\|shrink\|remove` | audio: target loudness in LUFS and cover art (output is M4A) |
+| `--mrc` / `--no-mrc` | PDF: layered scans on/off |
+| `--optimize-signed-pdfs` | don’t skip digitally signed PDFs |
 | `--copy` | keep the original, save “name.min.ext” |
 | `--json` | JSON output |
 
@@ -321,6 +324,15 @@ Fit File to Size, Resize to Template, Remove Background, Recognize Text, PDF to 
 
 ### Finder menu
 A “triflX…” item with a submenu: try variants, OCR, remove background, resize to template, documents (PDF → images, images → PDF, merge, split, HEIC/RAW → JPEG/PNG). If the submenu doesn’t appear after updating: `killall Finder`.
+
+### Version 2.4
+- **Audio loudness.** Targets: -14 LUFS (streaming), -16 (Apple Music, podcasts), -23 (broadcast, EBU R128). Loudness is measured per ITU-R BS.1770 with double gating and gain is capped by a -1 dB peak, so audio does not clip. Quiet tracks are brought up to target; loud ones are not squeezed. Output: AAC in M4A, tags kept.
+- **Cover art.** Keep, shrink (to 600 px JPEG) or remove. Handy for podcasts and libraries where the cover outweighs the track.
+- **MRC for PDF scans.** Off by default. A scanned page is split into a background (paper colour, 120 dpi, JPEG) and a text mask (1 bit, 300 dpi). Text stays sharp and size drops several times. Pages with a text layer, rotation or no large image are unchanged. Output text is black: for coloured or faint text compare with the original (kept in the backup).
+- **Signed PDFs** are skipped because any change breaks the signature.
+- **Sleep.** The Mac stays awake during long video, PDF and audio jobs.
+- **HDR.** JPEG and HEIC with a gain map (e.g. iPhone) stay HDR. WebP, AVIF, JPEG XL and PNG do not keep HDR; crop, watermark or a size template also drop it.
+- **Security.** `triflx://` links from other apps and sites need confirmation; Finder menu links are signed and pass at once. MCP cannot bypass protected folders (`--force` is CLI only).
 
 ### Terminal: what’s new
 `--template`, `--remove-bg`, `--lossless`, `--quality 1..100`, `--watermark`, `--force`, commands `ocr`, `remove-bg`, `try`, `stats`, `convert pdf2img|img2pdf|merge|split`, `selftest`. The MCP `optimize_file` tool gained `template`, `remove_background`, `lossless`, `force`.
