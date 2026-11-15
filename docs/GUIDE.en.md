@@ -216,7 +216,7 @@ triflx optimize --json *.png                 # JSON output
 | `--metadata strip\|keep\|nogps` | EXIF and location |
 | `--video universal\|messenger\|screen\|max`, `--video-limit MB` | video scenario and limit |
 | `--quality low\|medium\|high`, `--max-dim N` | quality and side cap |
-| `--loudness 14\|16\|23`, `--cover keep\|shrink\|remove` | audio: target loudness in LUFS and cover art (output is M4A) |
+| `--loudness streaming\|apple\|broadcast`, `--cover keep\|optimize\|remove` | audio: target loudness in LUFS and cover art (output is M4A) |
 | `--mrc` / `--no-mrc` | PDF: layered scans on/off |
 | `--optimize-signed-pdfs` | don’t skip digitally signed PDFs |
 | `--copy` | keep the original, save “name.min.ext” |

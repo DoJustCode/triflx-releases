@@ -216,7 +216,7 @@ triflx optimize --json *.png                 # результат в JSON
 | `--metadata strip\|keep\|nogps` | EXIF и геометки |
 | `--video universal\|messenger\|screen\|max`, `--video-limit MB` | сценарий и лимит видео |
 | `--quality low\|medium\|high`, `--max-dim N` | качество и потолок стороны |
-| `--loudness 14\|16\|23`, `--cover keep\|shrink\|remove` | аудио: целевая громкость LUFS и обложка (результат M4A) |
+| `--loudness streaming\|apple\|broadcast`, `--cover keep\|optimize\|remove` | аудио: целевая громкость LUFS и обложка (результат M4A) |
 | `--mrc` / `--no-mrc` | PDF: сканы слоями вкл/выкл |
 | `--optimize-signed-pdfs` | не пропускать PDF с цифровой подписью |
 | `--copy` | не заменять, сохранить «имя.min.расширение» |
