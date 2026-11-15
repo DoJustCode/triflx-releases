@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.5.0</title>
+      <pubDate>Sun, 15 Nov 2026 21:50:13 +0000</pubDate>
+      <sparkle:version>9</sparkle:version>
+      <sparkle:shortVersionString>2.5.0</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[HDR сохраняется при конвертации в AVIF, громкость звука в видео (--loudness и шаг пайплайна), выровнена вёрстка настроек: боковая панель, шаблоны размеров, пайплайны, кнопки добавления.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.5.0/triflX.dmg" type="application/octet-stream" sparkle:edSignature="TGGqcfJ+25FmDtcQ79r4dol+euCyuEr3TX8spAneC0Aka8clcokurPGjBynHmIjKkzbeTl5/Tn2z2rFP/EyBCg==" length="17629006"/>
+    </item>
+    <item>
       <title>triflX 2.4.0</title>
       <pubDate>Fri, 13 Nov 2026 22:38:58 +0000</pubDate>
       <sparkle:version>8</sparkle:version>
