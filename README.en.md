@@ -23,6 +23,7 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 <p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Diagram: screenshot, a card with Cancel, the result"></p>
 
 ## Contents
+- [What’s new in 2.5.0](#whats-new-in-250)
 - [What’s new in 2.4.0](#whats-new-in-240)
 - [What’s new in 2.3.0](#whats-new-in-230) - 13 new features
 - [What’s new in 2.2.0](#whats-new-in-220)
@@ -34,6 +35,14 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 - [Privacy](#privacy)
 - [FAQ](#faq)
 - [Documentation](#documentation)
+
+---
+
+## What’s new in 2.5.0
+
+- **HDR in AVIF.** HDR photos (JPEG, iPhone HEIC) stay HDR when converted to AVIF. WebP and JPEG XL still cannot store HDR.
+- **Loudness for video sound.** `--loudness streaming|apple|broadcast` (and the Loudness pipeline step) now normalizes video audio to -14, -16 or -23 LUFS without clipping.
+- **Tidier settings.** Wider sidebar, neat size templates and pipelines, one look for the “Add …” buttons.
 
 ---
 

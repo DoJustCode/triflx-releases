@@ -2,6 +2,15 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.5.0] - 2026-11-16
+
+### Added
+- HDR photos (JPEG and iPhone HEIC) keep HDR when converted to AVIF too.
+- Loudness for video sound: `--loudness streaming|apple|broadcast` and the Loudness pipeline step now work for video as well. The audio loudness setting does not apply to video, only an explicit request does.
+
+### Changed
+- Settings window: wider sidebar (tab names no longer truncated), tidy layout of size templates and pipelines, “Add …” buttons look like the rest, the loudness note sits under both audio items.
+
 ## [2.4.0] - 2026-11-14
 
 ### Added

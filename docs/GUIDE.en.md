@@ -216,7 +216,7 @@ triflx optimize --json *.png                 # JSON output
 | `--metadata strip\|keep\|nogps` | EXIF and location |
 | `--video universal\|messenger\|screen\|max`, `--video-limit MB` | video scenario and limit |
 | `--quality low\|medium\|high`, `--max-dim N` | quality and side cap |
-| `--loudness streaming\|apple\|broadcast`, `--cover keep\|optimize\|remove` | audio: target loudness in LUFS and cover art (output is M4A) |
+| `--loudness streaming\|apple\|broadcast`, `--cover keep\|optimize\|remove` | audio and video sound: target loudness in LUFS (-14 / -16 / -23); cover art (audio, output is M4A) |
 | `--mrc` / `--no-mrc` | PDF: layered scans on/off |
 | `--optimize-signed-pdfs` | don’t skip digitally signed PDFs |
 | `--copy` | keep the original, save “name.min.ext” |
@@ -331,7 +331,7 @@ A “triflX…” item with a submenu: try variants, OCR, remove background, res
 - **MRC for PDF scans.** Off by default. A scanned page is split into a background (paper colour, 120 dpi, JPEG) and a text mask (1 bit, 300 dpi). Text stays sharp and size drops several times. Pages with a text layer, rotation or no large image are unchanged. Output text is black: for coloured or faint text compare with the original (kept in the backup).
 - **Signed PDFs** are skipped because any change breaks the signature.
 - **Sleep.** The Mac stays awake during long video, PDF and audio jobs.
-- **HDR.** JPEG and HEIC with a gain map (e.g. iPhone) stay HDR. WebP, AVIF, JPEG XL and PNG do not keep HDR; crop, watermark or a size template also drop it.
+- **HDR.** JPEG, HEIC and AVIF with a gain map (e.g. iPhone) stay HDR. WebP, JPEG XL and PNG do not keep HDR; crop, watermark or a size template also drop it.
 - **Security.** `triflx://` links from other apps and sites need confirmation; Finder menu links are signed and pass at once. MCP cannot bypass protected folders (`--force` is CLI only).
 
 ### Terminal: what’s new
