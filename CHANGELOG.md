@@ -2,6 +2,14 @@
 
 Формат основан на [Keep a Changelog](https://keepachangelog.com/ru/1.1.0/). Версии нумеруются как `мажорная.минорная.исправление`. [English version](CHANGELOG.en.md)
 
+## [2.5.1] - 2026-11-16
+
+### Добавлено
+- Настройка «Короткие сообщения внизу экрана» (Основное): 2, 3,5 (по умолчанию), 6 или 10 секунд. Действует на сообщения вроде «Текст распознан».
+
+### Изменено
+- «Показывать карточку» теперь можно выбрать из 2, 3, 5, 10, 15, 30 секунд, 1 минуты или «Не скрывать» (раньше было 5, 15, 30 секунд и «Не скрывать»).
+
 ## [2.5.0] - 2026-11-16
 
 ### Добавлено
@@ -99,6 +107,7 @@
 - Первый выпуск triflX: проект на Xcode, родные действия в «Быстрых командах» (App Intents), вся функциональность Trifl 1.4 (буфер, папки, фильтры, видео, GIF, PDF, аудио, WebP, AVIF, JPEG XL, метаданные, горячие клавиши, Sparkle-обновления, русский и английский интерфейс).
 - Универсальная сборка (Apple Silicon и Intel), подпись и нотаризация, команда `triflx` и MCP-сервер.
 
+[2.5.1]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.5.1
 [2.3.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.3.0
 [2.2.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.2.0
 [2.1.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.1.0

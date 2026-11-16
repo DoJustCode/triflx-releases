@@ -2,6 +2,14 @@
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/). Versions are numbered `major.minor.patch`. [Русская версия](CHANGELOG.md)
 
+## [2.5.1] - 2026-11-16
+
+### Added
+- New setting “Short messages at the bottom” (General): 2, 3.5 (default), 6 or 10 seconds. It applies to messages such as “Text recognized”.
+
+### Changed
+- “Show the card for” now offers 2, 3, 5, 10, 15, 30 seconds, 1 minute or Never hide (it used to be 5, 15, 30 seconds and Never hide).
+
 ## [2.5.0] - 2026-11-16
 
 ### Added
@@ -99,6 +107,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 - The first triflX release: an Xcode project, native Shortcuts actions (App Intents), all of Trifl 1.4’s functionality (clipboard, folders, filters, video, GIF, PDF, audio, WebP, AVIF, JPEG XL, metadata, hotkeys, Sparkle updates, Russian and English UI).
 - A universal build (Apple Silicon and Intel), signing and notarization, the `triflx` command and an MCP server.
 
+[2.5.1]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.5.1
 [2.3.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.3.0
 [2.2.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.2.0
 [2.1.0]: https://github.com/DoJustCode/triflx-releases/releases/tag/v2.1.0

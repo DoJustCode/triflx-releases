@@ -91,7 +91,7 @@ Animated WebP/APNG and multi-frame files are never flattened to one frame. Corru
 Menu → “Settings…” (⌘,). The sidebar has a **settings search**.
 
 ### General
-- **Result card and cancel.** *Show the card for*: 5 / 15 / 30 s or Never hide. *Delay before compressing a file from a folder*: immediately, 2, 3 (default), 5, 10 s - the “cancel window” ([section 12](#12-cancel-and-restore-the-original)).
+- **Result card and cancel.** *Show the card for*: 2 / 3 / 5 / 10 / 15 / 30 s, 1 minute or Never hide. *Short messages at the bottom* (for example “Text recognized”): 2 / 3.5 / 6 / 10 s. *Delay before compressing a file from a folder*: immediately, 2, 3 (default), 5, 10 s - the “cancel window” ([section 12](#12-cancel-and-restore-the-original)).
 - **What to optimize.** Clipboard; TIFF data (usually from design apps - better left alone); new files in folders; pipelines for the clipboard and for drag and drop.
 - **Quality.** *Maximum compression / Balanced / High quality* (≈ 0.5 / 0.7 / 0.85 for JPEG-like formats). *Max image size* caps the longest side.
 - **Files.** *Result*: replace the file (original in backup) or save “name.min.ext” beside it. Result window, notifications, auto-update check, launch at login. A “Recent” block lists the latest files.
@@ -242,7 +242,7 @@ The log is never sent anywhere. “Report a problem…” opens a GitHub form; y
 **A file wasn't compressed - “Already optimal”.** The result wouldn't be smaller; the original is untouched and marked. Try “Strong compression” on the card.
 **It compressed too much / I need full size.** “Restore original” on the card or ⌃⇧Z; raise the delay before compression; exclude the folder or type in “Filters”.
 **Screenshots aren't compressed.** Check “Watch the clipboard” and that the app isn't in the ignored list. For folders: the folder is enabled and the file finished writing.
-**The Finder item is missing.** See [section 13](#13-finder-menu).
+**The Finder item is missing.** See [section 13](#13-finder-menu). If triflX exists in several places (for example in Downloads and in Applications), macOS may load the extension from an old copy: keep one copy, launch it and restart Finder (`killall Finder`).
 **MKV/WebM video isn't processed automatically.** Tick the extension in “Advanced → Compatibility → Video → MP4”.
 **How do I pause everything?** Menu → “Pause automatic optimization”, or switch off watching the clipboard / folders.
 **Privacy.** Everything happens locally. The only network requests are update checks (Sparkle) and, when you click it, opening a GitHub page.

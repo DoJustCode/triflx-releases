@@ -23,6 +23,7 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 <p align="center"><img src="docs/assets/flow-card.svg" width="460" alt="Diagram: screenshot, a card with Cancel, the result"></p>
 
 ## Contents
+- [What’s new in 2.5.1](#whats-new-in-251)
 - [What’s new in 2.5.0](#whats-new-in-250)
 - [What’s new in 2.4.0](#whats-new-in-240)
 - [What’s new in 2.3.0](#whats-new-in-230) - 13 new features
@@ -35,6 +36,13 @@ A 4 MB screenshot that won’t fit in an email. An 800 MB phone video. A scanned
 - [Privacy](#privacy)
 - [FAQ](#faq)
 - [Documentation](#documentation)
+
+---
+
+## What’s new in 2.5.1
+
+- **How long the result card stays.** Settings → General → “Result card and cancel” → “Show the card for”: 2, 3, 5, 10, 15, 30 seconds, 1 minute or Never hide.
+- **How long short messages stay.** Same place: “Short messages at the bottom” (for example “Text recognized”): 2, 3.5, 6 or 10 seconds.
 
 ---
 
