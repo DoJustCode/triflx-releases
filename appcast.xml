@@ -3,6 +3,15 @@
   <channel>
     <title>triflX</title>
     <item>
+      <title>triflX 2.5.1</title>
+      <pubDate>Mon, 16 Nov 2026 16:29:03 +0000</pubDate>
+      <sparkle:version>10</sparkle:version>
+      <sparkle:shortVersionString>2.5.1</sparkle:shortVersionString>
+      <sparkle:minimumSystemVersion>13.0</sparkle:minimumSystemVersion>
+      <description><![CDATA[Больше вариантов времени показа карточки результата, настройка времени коротких сообщений, исправление регистрации расширения Finder.]]></description>
+      <enclosure url="https://github.com/DoJustCode/triflx-releases/releases/download/v2.5.1/triflX.dmg" type="application/octet-stream" sparkle:edSignature="3PXmdizjzjRDw8uHXVWwleKlyGuR8iSOi4oItgHSZ4UKaCUM5zMdwL+ThE8mnRCroIp5J0mM5f739z3RENSdBQ==" length="17633632"/>
+    </item>
+    <item>
       <title>triflX 2.5.0</title>
       <pubDate>Sun, 15 Nov 2026 21:50:13 +0000</pubDate>
       <sparkle:version>9</sparkle:version>
